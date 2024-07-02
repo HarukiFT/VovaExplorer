@@ -1,0 +1,19 @@
+@import './Card.module.scss';
+
+.wrapper {
+    @extend .cardWrapper;
+}
+
+.curtain {
+    position: absolute;
+
+    background-color: $curtain-color;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 20;
+}

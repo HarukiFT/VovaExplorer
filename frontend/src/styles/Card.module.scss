@@ -1,0 +1,31 @@
+@import './variables.module.scss';
+$curtain-color: $primary-color;
+
+.cardWrapper {
+    box-sizing: border-box;
+    position: relative;
+
+    border: 2px solid rgba($primary-color, .75);
+    border-radius: 1em;
+
+    width: 100%;
+    aspect-ratio: 5 / 6;
+
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    transition: transform .25s;
+
+    &[active='true'] {
+        &:hover {
+            transform: scale(.97);
+        }
+
+        &:active {
+            transform: scale(.93);
+        }
+    }
+}
