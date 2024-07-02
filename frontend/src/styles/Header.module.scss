@@ -1,0 +1,86 @@
+@import './variables.module.scss';
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+
+    box-sizing: border-box;
+
+    background-color: $primary-color;
+
+    width: 100%;
+    padding: 1em 2em;
+
+    box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
+}
+
+.logoWrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    .logo {
+        position: relative;
+        height: 45px;
+
+        margin-right: 1em;
+    }
+
+    > p {
+        color: white;
+        font-size: 1.5em;
+        font-weight: 500;
+
+        pointer-events: none;
+    }
+}
+
+.actionWrapper {
+    display: flex;
+    align-items: center;
+
+    .userWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        height: 3em;
+        aspect-ratio: 1 / 1;
+
+        background-color: white;
+        border-radius: 50%;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        > img {
+            width: 70%;
+            height: 70%;
+        }
+    }
+
+    .actionButton {
+        font-size: 1.25em;
+        color: black;
+        background-color: white;
+
+        padding: .5em 1em;
+        border: 1px solid rgba(0, 0, 0, .5);
+        border-radius: .2em;
+
+        transition: transform .15s;
+
+        margin-right: 1em;
+
+        &:hover {
+            transform: scale(.97);
+        }
+
+        &:active {
+            transform: scale(.92);
+        }
+    }
+}
