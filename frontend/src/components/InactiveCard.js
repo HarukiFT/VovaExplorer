@@ -15,8 +15,9 @@ export default ({ order }) => {
         },
 
         config: {
+            bounce: 0,
             friction: 10,
-            tension: hoverOn ? (hoverOn == order ? 60 : 40) : 60
+            tension: hoverOn ? (hoverOn == order ? 100 : 60) : 100,
         }
     })
 
