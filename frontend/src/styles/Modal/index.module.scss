@@ -1,0 +1,19 @@
+@import '../variables.module.scss';
+
+$modal-background-color: #000;
+
+.wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+
+    background-color: rgba($modal-background-color, .75);
+}

@@ -1,0 +1,84 @@
+@import '../variables.module.scss';
+
+$card-modal-border-color: rgba(0, 0, 0, .5);
+$card-modal-divider-color: rgba(#d6d6d6, 1);
+$card-modal-padding-x: 1em;
+$card-modal-padding-y: .5em;
+
+.wrapper {
+    box-sizing: border-box;
+    width: 25%;
+}
+
+.cardName {
+    width: 100%;
+
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    border: 1px solid rgba(255, 255, 255, .15);
+
+    color: white;
+    font-size: 1.5em;
+
+    padding: $card-modal-padding-y $card-modal-padding-x;
+
+    background-color: $primary-color;
+}
+
+.description {
+    width: 100%;
+    
+    aspect-ratio: 5 / 2;
+
+    border: 1px solid $primary-color;
+    background-color: white;
+
+    margin: 1em 0;
+    padding: $card-modal-padding-y $card-modal-padding-x;
+
+    border-radius: 1em;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    
+    width: 100%;
+
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    border: 1px solid rgba(255, 255, 255, .15);
+
+    color: white;
+    font-size: 1.5em;
+
+    padding: $card-modal-padding-y $card-modal-padding-x;
+
+    background-color: $primary-color;
+    
+    > * {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.button {
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    border: 1px solid white;
+    border-radius: .2em;
+
+    font-size: .8em;
+
+    padding: .5em 1em;
+
+    cursor: pointer;
+
+    transition: all .1s;
+
+    &:hover {
+        transform: scale(.97);
+        background-color: rgba(255, 255, 255, 1);
+        color: black
+    }
+}

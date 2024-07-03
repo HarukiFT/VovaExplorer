@@ -8,6 +8,10 @@
     flex-direction: column;
 }
 
+.blur {
+    filter: blur(2px);
+}
+
 .siteTitle {
     margin: 1em 0;
     font-size: 2em;

@@ -1,11 +1,12 @@
 @import './variables.module.scss';
 $curtain-color: $primary-color;
+$card-border-color: rgba($primary-color, .75);
 
 .cardWrapper {
     box-sizing: border-box;
     position: relative;
 
-    border: 2px solid rgba($primary-color, .75);
+    border: 2px solid $card-border-color;
     border-radius: 1em;
 
     width: 100%;
