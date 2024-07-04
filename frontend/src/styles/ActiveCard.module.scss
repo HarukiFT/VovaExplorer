@@ -15,9 +15,52 @@
         width: 100%;
         padding: .5em 0;
         font-size: 1.25em;
+        font-weight: 500;
         text-wrap: nowrap;
 
         border-bottom: 2px solid $card-border-color;
+    }
+
+    .description {
+        width: 80%;
+        height: 60%;
+
+        margin-top: 1em;
+        padding: 1em;
+
+        border: 2px solid $card-border-color;
+        border-radius: 1em;
+
+        font-size: 1em;
+        color: rgb(43, 43, 43);
+
+
+        overflow: auto;
+    }
+
+    .status {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: absolute;
+        bottom: 0;
+
+        width: 100%;
+        padding: .5em 0;
+
+        background-color: $primary-color;
+
+        font-size: 1.2em;
+        
+        > p {
+            color: white;
+            margin-right: 5px;
+        }
+
+        > img {
+            height: 1em;
+        }
     }
 }
 
