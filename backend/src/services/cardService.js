@@ -27,15 +27,14 @@ const svcGetCards = async () => {
             try {
                 lastCommit = (card.repository ? (await axios.get(`https://api.github.com/repos/${owner}/${repo}`, {headers: { 'Authorization': `token ${config.gitToken}`}})).data.pushed_at : null)
             } catch (err) {
-                console.log(err)
+                
             }
         }
     
         try {
             ping = (await axios.get(card._doc.link)).status == 200
-            console.log(ping)
         } catch (err) { 
-            console.log(err)
+            
          }
 
        return { ...card._doc, lastCommit, ping }
