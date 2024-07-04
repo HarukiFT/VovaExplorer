@@ -5,6 +5,7 @@ const cardSchema = new mongoose.Schema({
     description: {type: String, required: true},
     link: {type: String, required: true},
     order: {type: Number, required: true},
+    summary: {type: String, required: true},
 
     repository: {type: String, required: false}
 })
