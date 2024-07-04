@@ -19,7 +19,7 @@ export default () => {
     if (!modalData) return;
     return (
         <animated.div style={wrapperSpring} className={Styles.wrapper}>
-            {modalData.type == 'card' ? <CardModal/> : null}
+            {modalData.type == 'card' ? <CardModal data={modalData.data}/> : null}
         </animated.div>
     )
 }
