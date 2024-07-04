@@ -1,7 +1,3 @@
-import { config } from "dotenv";
-
-config()
-
 export default {
-    apiEndpoint: process.env.API_ENDPOINT
+    apiEndpoint: process.env.REACT_APP_ENDPOINT
 }
