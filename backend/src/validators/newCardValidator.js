@@ -5,7 +5,7 @@ module.exports = [
         name: {isString: true, isLength: {max: 8}},
         description: {exists: true},
         order: {isInt: true},
-        summary: {isString},
+        summary: {isString: true},
         link: {isURL: true}
     })
 ]
