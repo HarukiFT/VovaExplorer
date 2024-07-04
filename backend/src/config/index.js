@@ -5,5 +5,6 @@ config()
 module.exports = {
     port: process.env.PORT,
     dbString: process.env.DB_STRING,
-    dbName: process.env.DB_NAME
+    dbName: process.env.DB_NAME,
+    gitToken: process.env.GIT_TOKEN
 }

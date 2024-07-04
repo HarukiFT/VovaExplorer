@@ -3,6 +3,7 @@ const { svcGetCards, svcNewCard } = require("../services/cardService")
 
 const ctrlGetCards = async (req, res) => {
     const cardsData = await svcGetCards()
+    console.log(cardsData)
 
     res.status(200).json(cardsData)
 }
