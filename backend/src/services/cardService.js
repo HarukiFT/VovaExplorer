@@ -44,7 +44,7 @@ const svcGetCards = async () => {
 }
 
 const svcNewCard = async (payload) => {
-    return await CardModel.create({name: payload.name, description: payload.description, link: payload.link, order: payload.order})
+    return await CardModel.create({name: payload.name, description: payload.description, link: payload.link, order: payload.order, repository: payload.repository, summary: payload.summary})
 }
 
 module.exports = {
