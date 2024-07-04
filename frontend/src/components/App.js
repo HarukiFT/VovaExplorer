@@ -4,6 +4,7 @@ import CardsHolder from "./CardsHolder"
 import { CardContextProvider } from "../contexts/CardContext"
 import { AppContextProvider, useAppContext } from "../contexts/AppContext"
 import Modal from "./Modal"
+import Footer from "./Footer"
 
 export default () => {
     const { modalData } = useAppContext()
@@ -18,6 +19,8 @@ export default () => {
                 <CardContextProvider>
                     <CardsHolder />
                 </CardContextProvider>
+
+                <Footer/>
             </div>
 
             <Modal />

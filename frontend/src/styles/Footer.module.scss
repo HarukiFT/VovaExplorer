@@ -1,0 +1,42 @@
+.footer {
+    display: flex;
+    padding: 0em 3em;
+    justify-content: end;
+
+    bottom: 0px;
+    width: 100%;
+
+    > a {
+        position: relative;
+
+        text-decoration: none;
+        color: black;
+        font-size: 1.5em;
+        padding: .4em .5em;
+
+        &::before {
+            position: absolute;
+            font-size: inherit;
+            content: "🩷";
+            left: 90%;
+            bottom: 50%;
+
+            transform: translateY(45%);
+        }
+
+        &::after {
+            position: absolute;
+            width: 65%;
+            height: 2px;
+            bottom: 5px;
+            left: 50%;
+            background-color: rgb(228, 54, 54);
+            
+            left: 50%;
+            transform: translateX(-50%);
+
+            content: "";
+
+        }
+    }
+}
