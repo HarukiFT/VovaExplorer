@@ -1,10 +1,17 @@
 import { useSpring, animated } from 'react-spring'
 import { useCardContext } from '../contexts/CardContext'
 import Styles from '../styles/ActiveCard.module.scss'
+import SuccessIcon from '../assets/success-status.svg'
+import ErrorIcon from '../assets/error-status.svg'
+
+const getFormattedDate = (date) => {
+    return `${date.getDate().toString().padStart(2, '0')}/${(date.getMonth() + 1).toString().padStart(2, '0')}/${date.getFullYear()}`
+}
 
 export default ({ order, onClick }) => {
-    const {hoverOn, setHoverOn} = useCardContext()
+    const {hoverOn, setHoverOn, cardsData} = useCardContext()
 
+    const cardData = cardsData.find(card => card.order == order)
     const row = Math.floor(order / 3)
     const column = order - (row * 3)
 
@@ -34,7 +41,16 @@ export default ({ order, onClick }) => {
             <animated.div style={curtainSpring} className={Styles.curtain}/>
 
             <div className={Styles.cardName}>
-                <p>{`Тестовая #${order}`}</p>
+                <p>{cardData.name}</p>
+            </div>
+
+            <div className={Styles.description}>
+                <p>{cardData.summary}</p>
+            </div>
+
+            <div className={Styles.status}>
+                <p>{`Обновлено: ${cardData.lastCommit ? getFormattedDate(new Date(cardData.lastCommit)) : '???'}`}</p>
+                <img src={cardData.ping ? SuccessIcon : ErrorIcon}/>
             </div>
         </div>
     )
